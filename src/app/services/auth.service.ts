@@ -13,21 +13,21 @@ export class AuthService {
 
   // Get all users from API -- Not in use
   getAllPosts() {
-    return this._http.get('http://localhost:3000/api/user')
+    return this._http.get('api/user')
       .map(res => res.json());
   }
   // Register Use from API
   registerUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this._http.post('http://localhost:3000/api/user/create', user, { headers: headers })
+    return this._http.post('api/user/create', user, { headers: headers })
       .map(res => res.json());
   }
   // Login user from API
   authenticateUser(user) {
     let headers = new Headers();
     headers.append('Content-Type', 'application/json');
-    return this._http.post('http://localhost:3000/api/user/authenticate', user, { headers: headers })
+    return this._http.post('api/user/authenticate', user, { headers: headers })
       .map(res => res.json());
   }
 
@@ -36,7 +36,7 @@ export class AuthService {
     this.loadToken();
     headers.append('Authorization', this.authToken);
     headers.append('Content-Type', 'application/json');
-    return this._http.get('http://localhost:3000/api/profile', { headers: headers })
+    return this._http.get('api/profile', { headers: headers })
       .map(res => res.json());
   }
 
