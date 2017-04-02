@@ -4,7 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcryptjs');
 
-const config = require('../config/database');
+const config = require('../../config/database');
 
 // --- MONOGO --- //
 const mongojs = require('mongojs');

@@ -4,7 +4,7 @@ const path = require('path');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const passport = require('passport');
-const api = require('./routes/api');
+const api = require('./app/routes/api');
 const app = express();
 
 const port = process.env.PORT || 3000;
@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 
 // --- MIDDLEWARE --- //
 app.use(cors());
-app.use(express.static(path.join(__dirname, 'dist')));
+app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.json());
 app.use('/api', api);
 
