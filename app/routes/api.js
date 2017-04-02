@@ -37,7 +37,7 @@ router.post('/user/create', (req, res, next) =>{
   var user = req.body;
 
   // Hash the Password using bcrypt
-  bcrypt.genSalt(10, (err, salt) =>{
+  bcrypt.genSalt(10, (err, salt) => {
     // Call in password from the new user
     bcrypt.hash(user.password, salt, (err, hash) =>{
       if(err) throw err;

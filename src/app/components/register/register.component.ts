@@ -45,8 +45,6 @@ export class RegisterComponent implements OnInit {
     });
   }
   ngOnInit() {
-    this._auth.getAllPosts().subscribe(post => {
-      console.log("post");
-    })
+
   }
 }
