@@ -17,6 +17,7 @@ const db = mongojs('mongodb://admin:admin@ds155428.mlab.com:55428/tiktalk2go', [
 //       res.send(err);
 //     }
 //     res.json(users);
+//     console.log(users);
 //   });
 // });
 
@@ -100,7 +101,11 @@ router.post('/user/authenticate', (req, res, next) =>{
 
 
 // This route will be our auth token page -- and shows profile info -- passport.authenticate('jwt', {session:false}),
-router.get('/user', passport.authenticate('jwt', {session:false}), (req, res) => {
+router.get('/profile', passport.authenticate('jwt', {session:false}), (req, res) => {
+  if(!req){
+    res.send('er!');
+    console.log('err?');
+  }
   res.json({user: req.user});
 });
 
