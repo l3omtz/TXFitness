@@ -1,6 +1,7 @@
 # TX Fitness
 
-This project was generated with Angular
+Development: MEAN Stack app with angular 4 and JWT Auth, passport-jwt, and bcryptjs to hash passwords
+Hosted: https://rhubarb-pudding-84042.herokuapp.com/
 
 ## Development server
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
